@@ -1,0 +1,14 @@
+#colorChanger{
+width:100%;
+height:20%;
+background: linear-gradient(132deg, #7035E8, #925BB2);
+background-size: 400% 400%;
+animation: BGgradient 10s ease infinite;
+position:fixed;
+}
+
+body{
+padding:0;
+margin:0;
+background-color:#F3EBF6;
+}

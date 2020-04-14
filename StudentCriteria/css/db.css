@@ -1,0 +1,132 @@
+body{
+padding:0;
+margin:0;
+background-color:#F3EBF6;
+}
+#colorChanger{
+width:100%;
+height:20%;
+background: linear-gradient(132deg, #7035E8, #925BB2);
+background-size: 400% 400%;
+animation: BGgradient 10s ease infinite;
+position:fixed;
+}
+
+#icon{
+  float:right;
+  margin-top:1.5%;
+  margin-right:1.5%;
+}
+
+#icon:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+
+@keyframes BGgradient {
+0%{background-position: 0% 50%;}
+50%{background-position: 100% 50%;}
+100%{background-position: 0% 50%;}
+}
+
+#box1{
+width:30%;
+height:50%;
+margin-top:17%;
+background-color:#009688;
+position: fixed;
+margin-left: 2%;
+border-radius: 5%;
+}
+
+#box2{
+width:30%;
+height:50%;
+margin-top:17%;
+margin-left:35%;
+border-radius: 5%;
+background-color:#009688;
+position: fixed;
+}
+
+
+
+#box3{
+width:30%;
+height:50%;
+margin-top:17%;
+margin-left:68%;
+background-color: #009688;
+position: fixed;
+border-radius: 5%;
+}
+
+#userProf{
+height:30%;
+width:15%;
+background-color: white;
+position: fixed;
+margin-left:85%;
+margin-top:9%;
+}
+
+h2{
+text-align: center;
+padding-top: 25%;
+color:white;
+}
+
+.allBoxes{
+animation: mo 5s ease;
+}
+
+#box1:hover{
+background-color: black;
+transition: 1s;
+color: white;
+cursor:pointer;
+padding-top:1.02%;
+padding-bottom:1.02%;
+background: linear-gradient(180deg, #009688, #F3EBF6);
+}
+
+#box2:hover{
+background-color: black;
+transition: .75s;
+color: white;
+cursor:pointer;
+padding-top:1.02%;
+padding-bottom:1.02%;
+background: linear-gradient(180deg, #009688, #F3EBF6);
+}
+
+#box3:hover{
+background-color: black;
+transition: .75s;
+color: white;
+cursor:pointer;
+padding-top:1.02%;
+padding-bottom:1.02%;
+margin-bottom:1%;
+background: linear-gradient(180deg, #009688, #F3EBF6);
+}
+
+#pdf {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes  mo {
+0%{opacity: 0;}
+100%{opacity: 1;}
+}
+
+img{
+align-content: center;
+}

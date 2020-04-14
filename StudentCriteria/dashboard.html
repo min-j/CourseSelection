@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" href="css/db.css">
+<head>
+
+<body>
+
+  <div id ="colorChanger">
+<img src="images/bxscilogo.jpg" alt="Smiley face" height="100%" width="10%">
+<img id="icon" onclick="pfp()" src="images/icon2.png" alt="Smiley face" height="60%" width="6%">
+    </div>
+
+    <div class ="allBoxes">
+<a href="courses.html"><div id = "box1">
+    <h2>Course Selection</h2>
+  </div></a>
+
+  <div id = "box2">
+  <h2>Appeal</h2>
+  </div>
+
+  <a href="pdf.html"><div id = "box3">
+    <h2>Course Guide</h2>
+  </div></a>
+</div>
+
+<div id="userProf">
+      <h3>Sign Out</h3>
+      <h3>Username: <h3>
+
+</div>
+
+<script src="javaScript/effects.js"></script>
+
+<!--firebase-->
+<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
+
+<!--Initialize Firebase-->
+<script>
+  var config = {
+    apiKey: "AIzaSyB2quSIJ-ptFzaNkPvzCgbfOsnMLypfmy4",
+    authDomain: "awesomeml-f5f43.firebaseapp.com",
+    databaseURL: "https://awesomeml-f5f43.firebaseio.com",
+    projectId: "awesomeml-f5f43",
+    storageBucket: "awesomeml-f5f43.appspot.com",
+    messagingSenderId: "431178309079"
+  };
+
+  firebase.initializeApp(config);
+</script>
+
+<!--scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="scripts/dashboard.js"></script>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,141 @@
+#colorChanger{
+width:100%;
+height:20%;
+background: linear-gradient(132deg, #7035E8, #925BB2);
+background-size: 400% 400%;
+animation: BGgradient 10s ease infinite;
+z-index:1;
+position:fixed;
+}
+
+body{
+padding:0;
+margin:0;
+background-color:#F3EBF6;
+}
+#english:hover{
+	opacity:1;
+	transition:.6s;
+}
+#mathematics:hover{
+	opacity:1;
+	transition:.6s;
+}
+#science:hover{
+	opacity:1;
+	transition:.6s;
+}
+#elective:hover{
+	opacity:1;
+	transition:.6s;
+}
+
+#history:hover{
+	opacity:1;
+	transition:.6s;
+}
+
+
+#english{
+height:30%;
+width:70%;
+background-color: #FFFFFF;
+position:absolute;
+margin-top:15%;
+margin-left:15%;
+box-shadow: 5px 10px #888888;
+overflow-x: hidden;
+border-radius: 30px;
+z-index:0;
+opacity:.75;
+}
+
+#mathematics{
+  height:30%;
+  width:70%;
+  position:absolute;
+  background-color: black;
+  margin-top:35%;
+  margin-left:15%;
+  box-shadow: 5px 10px #888888;
+  border-radius: 30px;
+  overflow-x: hidden;
+  z-index:0;
+  background-color: #FFFFFF;
+  opacity:.75;
+}
+
+#science{
+  height:30%;
+  width:70%;
+  position:absolute;
+  background-color: black;
+  margin-left:15%;
+   margin-top:55%;
+   box-shadow: 5px 10px #888888;
+   border-radius: 30px;
+  overflow-x: hidden;
+  z-index:0;
+  background-color: #FFFFFF;
+  opacity:.75;
+}
+
+#history{
+  height:30%;
+  width:70%;
+  position:absolute;
+  background-color: black;
+  overflow-x: hidden;
+  border-radius: 30px;
+  box-shadow: 5px 10px #888888;
+  z-index:0;
+  margin-left:15%;
+  margin-top:95%;
+  background-color: #FFFFFF;
+  opacity:.75;
+   margin-top:75%;
+}
+
+#elective{
+  height:30%;
+  width:70%;
+  position:absolute;
+  background-color: black;
+  overflow-x: hidden;
+  border-radius: 30px;
+  box-shadow: 5px 10px #888888;
+  z-index:0;
+  margin-left:15%;
+   margin-top:95%;
+   background-color: #FFFFFF;
+   opacity:.75;
+}
+
+h1{
+  text-align: center;
+  color:black;
+}
+
+h2{
+  color:black;
+  text-align:center;
+}
+
+select{
+	position:center;
+	display:block;
+	margin:auto;
+	padding:1%;
+	border-radius:20px;
+}
+
+button{
+	height:100%;
+	width:20%;
+	position: absolute;
+	margin-left: 30%;
+opacity: 0;
+transition: .8s;
+background-color:#F3EBF6;
+border:none;
+}
