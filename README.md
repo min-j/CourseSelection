@@ -7,7 +7,7 @@ On the administration side, a counselor can view their students with their respe
 
 I am using a rather limited (and fake) set of data for this project. What you see is to provides the best idea of what Nuclei can be. 
 
-##Usage
+## Usage
 To see a live example of this, please visit https://nuclei.herokuapp.com/. And use the following:
 
 ```txt
