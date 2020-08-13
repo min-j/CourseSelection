@@ -1,0 +1,44 @@
+body {
+	padding:0;
+	margin:0;
+}
+
+select {
+	position:center;
+	display:block;
+	margin:auto;
+	padding:1%;
+	border-radius:20px;
+}
+
+#content {
+background-color:#F3EBF6;
+}
+
+#english:hover, #mathematics:hover, #science:hover, #elective:hover, #history:hover {
+	opacity:1;
+	transition:.6s;
+}
+
+#english, #mathematics, #science, #history, #elective {
+	height:225px;
+	width:70%;
+	background-color: #FFFFFF;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left:15%;
+	box-shadow: 5px 10px #888888;
+	border-radius: 30px;
+	opacity:.75;
+	text-align: center;
+	color: black;
+}
+
+#final {
+	position: fixed;
+	z-index: 1;
+	width: 60%;
+	bottom: 7%;
+	background: linear-gradient(132deg, #7035E8, #925BB2);
+	opacity: 0;
+}

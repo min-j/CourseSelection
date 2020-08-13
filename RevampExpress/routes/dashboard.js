@@ -4,18 +4,22 @@ var router = express.Router();
 var { firebase } = require('../public/javascripts/config.js')
 const auth = firebase.auth();
 const students = firebase.database().ref().child('users').child('students');
+const admins = firebase.database().ref().child('users').child('admin');
 
-var parent;
-var loggedIn = false;
+var data;
 
 router.get('/', function(req, res, next) {
-  if (loggedIn) {
-    res.render('dashboard');
-  }
-  else {
+  if (global.parent == undefined) {
     res.redirect('/?e=user');
   }
+  else {
+    res.render('dashboard', { data: data });
+  }
 });
+
+router.get('/guide', function(req, res, next) {
+  res.render('guide')
+})
 
 router.post('/', function(req, res, next) {
   var success = true;
@@ -33,17 +37,25 @@ router.post('/', function(req, res, next) {
   var authFlag = true;
   auth.onAuthStateChanged(function(user) {
     if (user && authFlag && success) {
-      console.log('user logged in')
-      loggedIn = true;
+      console.log('user logged in');
       authFlag = false;
       students.orderByChild('userToken').equalTo(user.uid).once('value', function(snapshot) {
         snapshot.forEach(function(child) {
-          console.log(child.val());
-          parent = child.key;
-          console.log(parent);
-          // res.send(child.val());
+          // console.log(child.val());
+          data = child.val();
+          console.log(data);
+          global.parent = child.key;
+          // console.log(parent);
+          res.render('dashboard', { data : data });
         })
-        res.render('dashboard');
+      })
+      admins.orderByChild('userToken').equalTo(user.uid).once('value', function(snapshot) {
+        snapshot.forEach(function(child) {
+          // console.log(child.val());
+          global.admin = child.key;
+          // console.log(parent);
+          res.redirect('/admin');
+        })
       })
     }
   })
@@ -54,21 +66,10 @@ router.post('/logout', function(req, res, next) {
   firebase.auth().signOut().catch(function(error) {
     console.log(error);
   });
-  loggedIn = false;
-  console.log(parent);
+  global.parent = undefined;
+  global.admin = undefined;
+  // console.log(data);
   res.redirect('/');
 });
 
-// students.orderByChild('email').equalTo(req.body['email']).on('value', function(snapshot) {
-//   snapshot.forEach(function(child) {
-//     parent = child.key;
-//     console.log(parent);
-//     stdRef = students.child(parent);
-//     stdRef.child('FIRST').on('value', function(snapshot) {
-//       var name = JSON.stringify(snapshot.val());
-//       console.log(name)
-//       res.render('dashboard', { name: name })
-//     });
-//   })
-// });
 module.exports = router;
